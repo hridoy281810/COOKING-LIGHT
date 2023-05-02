@@ -20,9 +20,13 @@ const Header = () => {
        <div  className='me-5'>
        <NavLink to='/blog'  className={({ isActive }) => (isActive ? 'active' : 'default')}>Blog</NavLink>
        </div> 
-       <p>{user.displayMa}</p>
-       
+        {
+          user && <><img className='me-8' style={{height: '50px', width: '50px' , borderRadius: '50%'}} src="" alt="" /></>
+        }
+       {
+        user ? <><button  className="btn btn-primary">Logout</button></> : 
         <Link to='/login' className="btn btn-primary">Login</Link>
+       }  
         </div>
       </div>
       </nav>
