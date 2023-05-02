@@ -1,14 +1,15 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import { Outlet } from 'react-router-dom';
-import Login from '../Pages/Login/Login';
 import Footer from '../components/Footer/Footer';
 
 const LoginLayout = () => {
     return (
         <>
             <Header></Header>
-           <Outlet></Outlet>
+            <div className='min-h-[calc(100vh-373px)]'>
+          <Outlet></Outlet>
+         </div>
            <Footer></Footer>
         </>
     );
