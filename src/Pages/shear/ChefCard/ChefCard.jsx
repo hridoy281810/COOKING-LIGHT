@@ -4,7 +4,7 @@ import CardInfo from './CardInfo';
 const ChefCard = () => {
     const [cards,setCards] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/chefData')
+        fetch('https://assaignment-ten-server-hridoy281810.vercel.app/chefData')
         .then(res => res.json())
         .then(data =>setCards(data))
         .catch(error => console.error(error))

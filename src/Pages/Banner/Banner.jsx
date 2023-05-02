@@ -11,7 +11,7 @@ const Banner = () => {
            <div>
         <h3 className='text-2xl font-bold mb-2'>GET FRESHLY COOKED</h3>
         <h2 className='text-6xl font-bold mb-3'>Eat our delicious food with your family</h2>
-        <h3 className='text-2xl font-bold mb-3'>For Fresh & Delicious BD Recipe</h3>
+        <h3 className='text-2xl font-bold mb-3'>Bangladesh's number one and most trusted restaurant COOKING LIGHT</h3>
         <button className="btn btn-primary">Order Now</button>
              </div>
              <div>

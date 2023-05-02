@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayoout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -7,10 +7,10 @@ import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home";
 import RecipeLayout from "../Layout/RecipeLayout";
 import Recipe from "../Pages/Recipe/Recipe";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
    
-
     {
         path:'/',
         element:<MainLayout></MainLayout>,
@@ -30,14 +30,17 @@ const router = createBrowserRouter([
       
        
     },
+   
+
+    
     {
         path:'/recipe',
         element:<RecipeLayout></RecipeLayout>,
         children:[
             {
                 path:':id',
-                element:  <Recipe></Recipe>,
-                loader:({params})=> fetch(`http://localhost:5000/chefData/${params.id}`)
+                element: <PrivetRoute> <Recipe></Recipe></PrivetRoute>,
+                loader:({params})=> fetch(`https://assaignment-ten-server-hridoy281810.vercel.app/chefData/${params.id}`)
               
 
             }
