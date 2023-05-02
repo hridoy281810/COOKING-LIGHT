@@ -58,7 +58,7 @@ const Login = () => {
 
     return (
         <div>
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-teal-600">
   <div className="hero-content flex-col">
   <div className="text-center ">
       <h1 className="text-5xl font-bold mb-3">Please Login!</h1> </div>
@@ -71,7 +71,8 @@ const Login = () => {
         <div className="form-control">
           <input type="password" placeholder="password" name='password' className="input input-bordered mb-4"  required/>
         </div>
-        <p></p>
+        <p>{error}</p>
+        <p>{success}</p>
         <p>
         Don't Have an Account? 
             <Link to='/register' className="text-primary"> Register </Link>
