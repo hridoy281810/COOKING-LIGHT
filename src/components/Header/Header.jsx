@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
+  const {user} = useContext(AuthContext)
     return (
       <nav className='container'>
           <div className=" py-4 px3 navbar bg-base-100">
@@ -17,7 +19,8 @@ const Header = () => {
        </div>
        <div  className='me-5'>
        <NavLink to='/blog'  className={({ isActive }) => (isActive ? 'active' : 'default')}>Blog</NavLink>
-       </div>
+       </div> 
+       <p>{user.displayMa}</p>
        
         <Link to='/login' className="btn btn-primary">Login</Link>
         </div>

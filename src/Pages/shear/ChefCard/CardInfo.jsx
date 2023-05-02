@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CardInfo = ({card}) => {
     const {id,chef_name,years_of_experience,number_of_recipes,likes,chef_picture_url} = card;
     return (
-        <div className=''>
+        <div className='mb-24'>
             <div className="card w-96 bg-base-100 pt-2 shadow-xl">
   <figure><img className='' style={{width:'150px', height:'200px', borderRadius: '10px'}} src={chef_picture_url} alt="chef_picture" /></figure>
   <div className="card-body">

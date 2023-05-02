@@ -1,19 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '@smastrom/react-rating/style.css'
+import { Rating } from '@smastrom/react-rating';
+import { toast } from 'react-hot-toast';
+
 const RecipeCard = ({recipe}) => {
-    const {recipes_1,recipes_2,recipes_3} = recipe;
+    const {recipes_1,recipes_2,recipes_3,name,ingredients,method,rating ,recipe_picture_url} = recipe;
+
+    const [favorite,setFavorite] = useState(false)
+    const handleFavorite = (event)=>{
+        setFavorite(event.target.disabled)
+    //   return()=> toast('Here is your toast.')
+    return toast.error('Cart is empty! 🔥')
+       
+       
+       }
 
     return (
-        <div className='container'>
-            <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className='container mt-24  mb-24'>
+            <h1 className='mb-20 text-center text-3xl font-bold'>Some special recipes and their description</h1>
+       <div className='md:grid md:grid-cols-3 gap-10'>
+       <div className="card w-full bg-base-100 shadow-xl">
+  <figure><img style={{height: '281px'}} src={recipes_1?.recipe_picture_url} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 className="card-title">{recipes_1?.name}</h2>
+    <p> <strong>Ingredients:</strong> {recipes_1?.ingredients}</p>
+    <p> <strong>Cooking Method:</strong> {recipes_1?.method}</p>
+    <div className='flex-grow-1 flex items-center mt-4 mb-3'>
+   <Rating style={{ maxWidth:150 }} value={Math.round(recipes_1?.rating || 0)} readOnly/>
+    <span className='ms-2'>{recipes_1?.rating}</span>
+   </div>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+      <button 
+       type='button'
+      onClick={() => {
+                    handleFavorite(
+                        event.target.disabled = true)
+                }} className='btn w-full btn-primary '>Favorite</button>
     </div>
   </div>
 </div>
+       <div className="card  w-full bg-base-100 shadow-xl">
+  <figure><img style={{height: '281px'}} src={recipes_2?.recipe_picture_url} alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">{recipes_2?.name}</h2>
+    <p> <strong>Ingredients:</strong> {recipes_2?.ingredients}</p>
+    <p> <strong>Cooking Method:</strong> {recipes_2?.method}</p>
+    <div className='flex-grow-1 flex items-center mt-4 mb-3'>
+   <Rating style={{ maxWidth:150 }} value={Math.round(recipes_2?.rating || 0)} readOnly/>
+    <span className='ms-2'>{recipes_2?.rating}</span>
+   </div>
+    <div className="card-actions justify-end">
+      <button 
+       type='button'
+      onClick={() => {
+                    handleFavorite(
+                        event.target.disabled = true)
+                }} className='btn w-full btn-primary '>Favorite</button>
+    </div>
+  </div>
+</div>
+       <div className="card  w-full bg-base-100 shadow-xl">
+  <figure><img style={{height: '281px'}} src={recipes_3?.recipe_picture_url} alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">{recipes_3?.name}</h2>
+    <p> <strong>Ingredients:</strong> {recipes_3?.ingredients}</p>
+    <p> <strong>Cooking Method:</strong> {recipes_3?.method}</p>
+    <div className='flex-grow-1 flex items-center mt-4 mb-3'>
+   <Rating style={{ maxWidth:150 }} value={Math.round(recipes_3?.rating || 0)} readOnly/>
+    <span className='ms-2'>{recipes_3?.rating}</span>
+   </div>
+    <div className="card-actions justify-end">
+      <button 
+       type='button'
+      onClick={() => {
+                    handleFavorite(
+                        event.target.disabled = true)
+                }} className='btn w-full btn-primary '>Favorite</button>
+    </div>
+  </div>
+</div>
+       </div>
         </div>
     );
 };

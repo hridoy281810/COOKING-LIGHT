@@ -12,7 +12,7 @@ const ChefCard = () => {
     return (
         <div className='container mt-24'>
             <h1 className='mb-20 text-center text-3xl font-bold'>Learn about our chefs</h1>
-            <div className='grid md:grid-cols-3 gap-20'>
+            <div className='grid md:grid-cols-3 gap-10'>
                 { 
 cards.map(card => <CardInfo key={card.id} card={card}></CardInfo>)
                 }
