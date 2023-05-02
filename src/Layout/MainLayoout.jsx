@@ -1,11 +1,18 @@
 import React from 'react';
+import Header from '../components/Header/Header';
+import Banner from '../Pages/Banner/Banner';
+import ChefCard from '../Pages/shear/ChefCard/ChefCard';
+import Footer from '../components/Footer/Footer';
 
-const MainLayoout = () => {
+const MainLayout = () => {
     return (
-        <div>
-            main layout
-        </div>
+        <>
+          <Header></Header>
+          <Banner></Banner>
+          <ChefCard></ChefCard>
+          <Footer></Footer>
+        </>
     );
 };
 
-export default MainLayoout;
+export default MainLayout;

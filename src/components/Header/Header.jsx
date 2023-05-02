@@ -14,7 +14,7 @@ const Header = () => {
         <div className="flex-none">
         <Link className='me-5'>Home</Link>
         <Link className='me-5'>Blog</Link>
-        <button className="btn btn-secondary">Button</button>
+        <button className="btn btn-primary">Login</button>
         </div>
       </div>
       </nav>
