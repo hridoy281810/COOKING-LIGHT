@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating';
 import { ToastContainer, toast } from 'react-toastify';
+import LazyLoad from 'react-lazy-load';
 
 const RecipeCard = ({recipe}) => {
     const {recipes_1,recipes_2,recipes_3} = recipe;
@@ -23,7 +24,7 @@ const RecipeCard = ({recipe}) => {
             <h1 className='mb-20 text-center text-3xl font-bold'>Some special recipes and their description</h1>
        <div className='md:grid md:grid-cols-3 gap-10'>
        <div className="card w-full bg-base-100 shadow-xl">
-  <figure><img style={{height: '281px'}} src={recipes_1?.recipe_picture_url} alt="Shoes" /></figure>
+  <figure><LazyLoad height={281}><img style={{height: '281px'}} src={recipes_1?.recipe_picture_url} alt="Shoes" /></LazyLoad></figure>
   <div className="card-body">
     <h2 className="card-title">{recipes_1?.name}</h2>
     <p> <strong>Ingredients:</strong> {recipes_1?.ingredients}</p>
@@ -43,7 +44,7 @@ const RecipeCard = ({recipe}) => {
   </div>
 </div>
        <div className="card  w-full bg-base-100 shadow-xl">
-  <figure><img style={{height: '281px'}} src={recipes_2?.recipe_picture_url} alt="Shoes" /></figure>
+  <figure><LazyLoad height={281}><img style={{height: '281px'}} src={recipes_2?.recipe_picture_url} alt="Shoes" /></LazyLoad> </figure>
   <div className="card-body">
     <h2 className="card-title">{recipes_2?.name}</h2>
     <p> <strong>Ingredients:</strong> {recipes_2?.ingredients}</p>
@@ -63,7 +64,7 @@ const RecipeCard = ({recipe}) => {
   </div>
 </div>
        <div className="card  w-full bg-base-100 shadow-xl">
-  <figure><img style={{height: '281px'}} src={recipes_3?.recipe_picture_url} alt="Shoes" /></figure>
+  <figure> <LazyLoad height={281}><img style={{height: '281px'}} src={recipes_3?.recipe_picture_url} alt="Shoes" /></LazyLoad> </figure>
   <div className="card-body">
     <h2 className="card-title">{recipes_3?.name}</h2>
     <p> <strong>Ingredients:</strong> {recipes_3?.ingredients}</p>

@@ -9,7 +9,6 @@ import img6 from '../../assets/img/populer22.jpg'
 import img7 from '../../assets/img/recipy1.jpg'
 import img8 from '../../assets/img/recipy2.jpg'
 import img9 from '../../assets/img/ricipy3.jpg'
-import img10 from '../../assets/img/ricipy4.jpg'
 
 const OurDeliciusOffer = () => {
     return (
