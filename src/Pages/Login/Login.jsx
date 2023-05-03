@@ -2,14 +2,18 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import {  FaGithub, FaGoogle } from 'react-icons/fa';
+import logo1 from '../../assets/img/logo1.png'
+
+
 const Login = () => {
-  const {loginUser,loading,googleLogin,githubLogin}  = useContext(AuthContext);
+  const {loginUser,googleLogin,githubLogin}  = useContext(AuthContext);
   
   const [error,setError] = useState('')
   const [success,setSuccess] = useState('')
 
   const navigate = useNavigate();
   const location = useLocation()
+
   console.log(location)
   const from =  location.state?.from?.pathname || '/'
 
@@ -65,8 +69,13 @@ const Login = () => {
    <form onSubmit={handleLogin}>
    <div className="card flex-shrink-0  w-full max-w-lg shadow-2xl bg-base-100">
       <div className="card-body">
+      
+<div className='flex justify-center shadow rounded border-2 mb-4 border-orange-600'>          <Link to='/' className=" normal-case text-2xl font-semibold text-orange-600 md:flex items-center ">
+            <img style={{width:'70px'}} src={logo1} alt="" /> COOKING LIGHT </Link></div>
+    
+        
         <div className="form-control">
-          <input style={{width: '400px'}}  type="text" name='email' placeholder="email" className="input mb-4 mt-4 input-bordered " />
+          <input style={{width: '400px'}}  type="text" name='email' placeholder="email" className="input mb-4  input-bordered " />
         </div>
         <div className="form-control">
           <input type="password" placeholder="password" name='password' className="input input-bordered mb-4"  required/>

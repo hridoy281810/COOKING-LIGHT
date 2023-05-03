@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const RecipeBanner = ({recipe}) => {
    const {chef_name,years_of_experience,number_of_recipes,likes,chef_picture_url,description} = recipe;
-
+ 
     return (
         <div >
         <div className="hero min-h-screen bg-orange-100">

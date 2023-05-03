@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating';
-import { toast } from 'react-hot-toast';
+import { ToastContainer, toast } from 'react-toastify';
 
 const RecipeCard = ({recipe}) => {
-    const {recipes_1,recipes_2,recipes_3,name,ingredients,method,rating ,recipe_picture_url} = recipe;
+    const {recipes_1,recipes_2,recipes_3} = recipe;
 
     const [favorite,setFavorite] = useState(false)
     const handleFavorite = (event)=>{
+       if(favorite){
         setFavorite(event.target.disabled)
-    //   return()=> toast('Here is your toast.')
-    return toast.error('Cart is empty! 🔥')
-       
-       
        }
+  else{
+     toast(' asjdf;oi 🔥')
+       
+       
+       }  }
 
     return (
         <div className='container mt-24  mb-24'>
+          <ToastContainer></ToastContainer>
             <h1 className='mb-20 text-center text-3xl font-bold'>Some special recipes and their description</h1>
        <div className='md:grid md:grid-cols-3 gap-10'>
        <div className="card w-full bg-base-100 shadow-xl">

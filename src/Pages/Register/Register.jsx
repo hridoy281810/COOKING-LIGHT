@@ -1,6 +1,7 @@
 import React, { useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import logo1 from '../../assets/img/logo1.png'
 
 const Register = () => {
   const {createUser} = useContext(AuthContext)
@@ -17,7 +18,7 @@ const Register = () => {
   setError('')
   setSuccess('')
 
-  if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/.test(password)) {
+  if (password.length < 6(password)) {
     setError("password not valid need 6 char ");
     return;
   }
@@ -38,13 +39,15 @@ const Register = () => {
  return (
         <div>
         
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-teal-600">
   <div className="hero-content flex-col">
   <div className="text-center ">
       <h1 className="text-5xl font-bold mb-3">Please Register!</h1> </div>
    <form onSubmit={handleRegister}>
    <div className="card flex-shrink-0  w-full max-w-lg shadow-2xl bg-base-100">
       <div className="card-body">
+      <div className='flex justify-center shadow rounded border-2 mb-4 border-orange-600 '>          <Link to='/' className="  normal-case text-2xl font-semibold text-orange-600 md:flex items-center ">
+            <img style={{width:'70px'}} src={logo1} alt="" /> COOKING LIGHT </Link></div>
         <div className="form-control">
           <input  type="text" name='name' placeholder="name" className="input input-bordered mb-4" required/>
         </div>

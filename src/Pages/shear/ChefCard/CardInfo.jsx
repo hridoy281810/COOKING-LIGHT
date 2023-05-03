@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const CardInfo = ({card}) => {
     const {id,chef_name,years_of_experience,number_of_recipes,likes,chef_picture_url} = card;

@@ -20,9 +20,7 @@ const Header = () => {
         <div className="flex-1 grow">
           <Link to='/' className=" normal-case text-2xl font-semibold text-orange-600 md:flex items-center ">
             <img style={{width:'70px'}} src={logo1} alt="" /> COOKING LIGHT </Link>
-        <div>
       
-        </div>
         </div>
         <div className="flex-none">
        <div  className='me-5 text-xl'>

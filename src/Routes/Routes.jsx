@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
+import {  createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayoout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import RecipeLayout from "../Layout/RecipeLayout";
 import Recipe from "../Pages/Recipe/Recipe";
 import PrivetRoute from "./PrivetRoute";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
    
@@ -24,8 +25,7 @@ const router = createBrowserRouter([
             {
                 path:'/blog',
                 element: <Blog></Blog>
-            },
-           
+            }
         ]
       
        
@@ -44,6 +44,7 @@ const router = createBrowserRouter([
               
 
             }
+
         ]
         
     },
@@ -60,9 +61,14 @@ const router = createBrowserRouter([
         {
             path:'/register',
            element: <Register />
-        },
+        }
+        
        ]
     },
+    {
+path: '*',
+element: <Error></Error>
+    }
    
 ])
 
