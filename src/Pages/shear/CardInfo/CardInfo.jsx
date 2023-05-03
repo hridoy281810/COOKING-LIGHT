@@ -19,6 +19,7 @@ const CardInfo = ({card}) => {
     </div>
   </div>
 </div>
+
         </div>
     );
 };

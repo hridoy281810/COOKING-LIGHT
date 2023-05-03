@@ -13,7 +13,7 @@ const RecipeCard = ({recipe}) => {
         setFavorite(event.target.disabled)
        }
   else{
-     toast(' asjdf;oi 🔥')
+     toast(' This dish has been saved to your favorites list 🔥')
        
        
        }  }

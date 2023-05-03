@@ -1,7 +1,8 @@
 import React, {  useEffect, useState } from 'react';
 import CardInfo from '../CardInfo/CardInfo';
 import { FaRegPaperPlane } from 'react-icons/fa';
-import Loader from '../Loader/Loader';
+// import Loader from '../Loader/Loader';
+import { Audio } from 'react-loader-spinner';
 
 const ChefCard = () => {
 
@@ -16,7 +17,16 @@ const ChefCard = () => {
         setSpinner(false)
     },[])
  if(spinner){
-    return <Loader></Loader>
+    // return <Loader></Loader>
+    return<div className='flex justify-center items-center'> <Audio
+    height = "80"
+    width = "80"
+    radius = "9"
+    color = 'green'
+    ariaLabel = 'three-dots-loading'     
+    wrapperStyle
+    wrapperClass
+  /></div>
  }
     return (
         <div className='container mt-24'>

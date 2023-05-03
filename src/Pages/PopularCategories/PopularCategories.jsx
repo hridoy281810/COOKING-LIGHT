@@ -4,6 +4,8 @@ import popular1 from '../../assets/img/popolar.png'
 import popular2 from '../../assets/img/populer22.jpg'
 import popular3 from '../../assets/img/populer2.png'
 import './PopularCategories.css'
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 const PopularCategories = () => {
     return (
@@ -14,9 +16,9 @@ const PopularCategories = () => {
            <button className="btn btn-primary button-m">View More <FaRegPaperPlane className='ms-4'></FaRegPaperPlane> </button>
            </div>
            <hr />
-           <div className=" md:flex justify-between  mt-10">
-        
-           <div className="bg-white shadow p-4 p-card rounded-lg  ">
+           <div className="  mt-10">
+<AwesomeSlider className='bg-white' >
+<div className="bg-white shadow p-4 p-card rounded-lg  ">
     <img src={popular1} style={{height:'268px'}} className="max-w-sm rounded-lg shadow-2xl popular1" />
     <div>
       <h1 className="text-5xl font-bold">Shorshe Ilish!</h1>
@@ -24,7 +26,7 @@ const PopularCategories = () => {
       <button className="btn btn-primary">Discover Recipes</button>
     </div>
             </div>
-           <div className="bg-white shadow p-4 p-card rounded-lg  ">
+            <div className="bg-white shadow p-4 p-card rounded-lg  ">
     <img src={popular2} style={{height:'268px'}} className="max-w-sm popular1 rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-5xl font-bold"> Kacchi Biriyani!</h1>
@@ -32,7 +34,7 @@ const PopularCategories = () => {
       <button className="btn btn-primary">Discover Recipes</button>
     </div>
             </div>
-           <div className="bg-white shadow p-4  rounded-lg  ">
+            <div className="bg-white shadow p-4  rounded-lg  ">
     <img src={popular3} className="max-w-sm rounded-lg p-card shadow-2xl popular1" />
     <div>
       <h1 className="text-5xl font-bold">Chicken Biryani!</h1>
@@ -40,7 +42,18 @@ const PopularCategories = () => {
       <button className="btn btn-primary">Discover Recipes</button>
     </div>
             </div>
-</div>
+  </AwesomeSlider>
+  </div>
+
+
+ 
+
+
+ 
+
+
+
+
         </div>
      
     );
