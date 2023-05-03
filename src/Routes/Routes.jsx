@@ -9,6 +9,7 @@ import RecipeLayout from "../Layout/RecipeLayout";
 import Recipe from "../Pages/Recipe/Recipe";
 import PrivetRoute from "./PrivetRoute";
 import Error from "../Pages/Error/Error";
+import UserProfile from "../Pages/UserProfile/UserProfile";
 
 const router = createBrowserRouter([
    
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path:'/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path:'/profile',
+                element:<UserProfile></UserProfile>
             }
         ]
       

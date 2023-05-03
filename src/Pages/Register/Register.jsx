@@ -49,10 +49,10 @@ const Register = () => {
       <div className='flex justify-center shadow rounded border-2 mb-4 border-orange-600 '>          <Link to='/' className="  normal-case text-2xl font-semibold text-orange-600 md:flex items-center ">
             <img style={{width:'70px'}} src={logo1} alt="" /> COOKING LIGHT </Link></div>
         <div className="form-control">
-          <input  type="text" name='name' placeholder="name" className="input input-bordered mb-4" required/>
+          <input  type="text" name='name' placeholder="name" className="input input-bordered mb-4 " required/>
         </div>
         <div className="form-control">
-          <input style={{width: '400px'}}  type="text" name='email' placeholder="email" className="input mb-4 input-bordered " />
+          <input style={{width: '400px'}}  type="text" name='email' placeholder="email" className="input mb-4 input-bordered email-l " />
         </div>
         <div className="form-control">
           <input type="password" placeholder="password" name='password' className="input input-bordered mb-4"  required/>

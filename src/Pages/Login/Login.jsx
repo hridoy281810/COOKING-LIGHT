@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import {  FaGithub, FaGoogle } from 'react-icons/fa';
 import logo1 from '../../assets/img/logo1.png'
+import './Login.css'
 
 
 const Login = () => {
@@ -77,7 +78,7 @@ const Login = () => {
     
         
         <div className="form-control">
-          <input style={{width: '400px'}}  type="text" name='email' placeholder="email" className="input mb-4  input-bordered " />
+          <input style={{width: '400px'}}  type="text" name='email' placeholder="email" className="input mb-4  input-bordered email-l " />
         </div>
         <div className="form-control">
           <input type="password" placeholder="password" name='password' className="input input-bordered mb-4"  required/>

@@ -1,7 +1,7 @@
 import React, {  useEffect, useState } from 'react';
-import CardInfo from './CardInfo';
-import Loader from '../Loader/Loader';
+import CardInfo from '../CardInfo/CardInfo';
 import { FaRegPaperPlane } from 'react-icons/fa';
+import Loader from '../Loader/Loader';
 
 const ChefCard = () => {
 
@@ -22,7 +22,7 @@ const ChefCard = () => {
         <div className='container mt-24'>
            <div className='md:flex justify-between '>
            <h1 className='mb-10 text-center text-3xl font-bold'>Learn about our chefs</h1>
-           <button className="btn btn-primary">View More <FaRegPaperPlane className='ms-4'></FaRegPaperPlane> </button>
+           <button className="btn btn-primary button-m">View More <FaRegPaperPlane className='ms-4'></FaRegPaperPlane> </button>
            </div>
            <hr />
             <div className='grid md:grid-cols-3 gap-10 mt-10'>

@@ -1,0 +1,8 @@
+@media screen and (max-width:576px) {
+
+    .footer-res {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+  
+  }

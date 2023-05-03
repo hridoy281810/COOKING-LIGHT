@@ -1,0 +1,16 @@
+@media screen and (max-width:576px) {
+
+    .header-res {
+     flex-direction: column;
+     margin-bottom: 10px;
+    }
+    .header-logo{
+    
+    margin-bottom: 20px;
+    }
+  .header-logo-p{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+  }
+  }

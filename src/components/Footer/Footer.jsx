@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from '../../assets/img/logo1.png'
+import './footer.css'
 const Footer = () => {
     return (
       <div className='bg-base-200 '>
           <div className='container  '>
-           <footer className="footer p-10 text-base-content">
+           <footer className="footer footer-res p-10 text-base-content">
   <div>
     <span className="footer-title">Categories</span> 
     <Link className="link link-hover">Breakfast Recipes</Link> 

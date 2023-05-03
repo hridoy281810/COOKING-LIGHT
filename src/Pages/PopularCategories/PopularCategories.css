@@ -1,0 +1,10 @@
+@media screen and (max-width:576px) {
+  .p-card{
+    margin-bottom: 20px !important;
+  }
+    .popular1 {
+width:290px !important;
+height: 195px !important;
+    }
+  
+  }
