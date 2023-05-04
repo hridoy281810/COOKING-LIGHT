@@ -5,14 +5,14 @@ import PopularCategories from '../PopularCategories/PopularCategories';
 import OurDeliciusOffer from '../OurDeliciusOffer/OurDeliciusOffer';
 
 const Home = () => {
-   
-     
+
+
     return (
         <div>
             <Banner></Banner>
-          <ChefCard></ChefCard>
-          <PopularCategories></PopularCategories>
-          <OurDeliciusOffer></OurDeliciusOffer>
+            <ChefCard></ChefCard>
+            <PopularCategories></PopularCategories>
+            <OurDeliciusOffer></OurDeliciusOffer>
         </div>
     );
 };

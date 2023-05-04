@@ -1,14 +1,18 @@
+.awssld__content {
+  background-color: rgba(0, 0, 0, 0.365) !important;
+}
 
-.awssld__content{
-    background-color: rgba(0, 0, 0, 0.365) !important;
-   }
 @media screen and (max-width:576px) {
-  .p-card{
-    margin-bottom: 20px !important;
+  .popular1 {
+    width: 200px !important;
+    height: 70px !important;
   }
-    .popular1 {
-width:290px !important;
-height: 195px !important;
-    }
-  
+  .text-responsive{
+    font-size: 18px;
+   margin-bottom: 0px !important;
   }
+  .text-responsive-2{
+    padding: 0 !important;
+    font-size: 12px;
+  }
+}
